@@ -1,0 +1,134 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+    display: flex;
+    flex-direction: column; /* Flexbox layout */
+    align-items: center; /* Center content horizontally */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: white;
+    border-bottom: 2px solid #FFA500; /* Orange accent */
+    width: 100%; /* Make sure the header stretches across the page */
+    display: flex;
+    justify-content: center; /* Center the header content */
+}
+
+header nav {
+    width: 80%; /* Make the header content align with the rest of the page */
+    display: flex;
+    justify-content: space-between; /* Align the "Your Shop" title on the left and "Home" link on the right */
+    align-items: center; /* Align items vertically */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Main content should flex-grow to push the footer down */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    width: 80%; /* Align main content width with the header */
+}
+
+/* Footer should always stick to the bottom */
+footer {
+    background-color: #FFA500; /* Orange accent */
+    padding: 10px;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Styling for product grid */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Make the "Buy Now" button green with 1/4 width */
+.buy-now-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding for better sizing */
+    cursor: pointer;
+    margin-bottom: 20px; /* Ensure separation from footer */
+    width: 25%; /* Set the width to 1/4th of the container */
+    max-width: 200px; /* Limit the maximum width */
+}
+
+.buy-now-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Ensure proper separation between the content and the footer */
+.product-detail {
+    margin-bottom: 40px; /* Adds space between content and footer */
+}
+
+/* Align the card input fields better */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Control the width of the payment form */
+}
+
+.stripe-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stripe-input input {
+    width: 100%;
+    margin-right: 10px; /* Add some space between inputs */
+}
+
+.card-element {
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing below the card element */
+}
+
+/* Submit payment button with full width */
+button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}

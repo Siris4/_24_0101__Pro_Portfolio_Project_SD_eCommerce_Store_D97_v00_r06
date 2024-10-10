@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="product-detail">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <!-- Format the price to display with two decimal places -->
+        <p>Price: ${{ '%.2f' % (product.price / 100) }}</p>
+        <form action="/checkout" method="POST">
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            <!-- Make the button green -->
+            <button type="submit">Buy Now</button>
+        </form>
+    </div>
+{% endblock %}

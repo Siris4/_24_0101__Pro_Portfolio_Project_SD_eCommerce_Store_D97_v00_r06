@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Welcome to the Siris Dynamics Shop</h2>
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="product">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <!-- Format the price to display with two decimal places -->
+                <p>Price: ${{ '%.2f' % (product.price / 100) }}</p>
+                <a href="/product/{{ product.id }}">View Product</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
